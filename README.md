@@ -1,5 +1,48 @@
 # Blog API
 
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:2400`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+```
+## Production
+
+
+```bash
+# npm
+npm run start
+
+# pnpm
+pnpm run start
+
+# yarn
+yarn start
+```
+
 API documentation for the Crud API Challenge - Slightly Techie
 
 ## Base URL
