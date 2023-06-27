@@ -19,7 +19,7 @@ app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
 
 // Connect to MongoDB
-const dbURI = 'mongodb+srv://kraftsman:3J6Z6K5JmSQfGrJk@cluster0.q322psp.mongodb.net/crud-api';
+const dbURI = process.env.MONGODB_URI;
 mongoose.connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
