@@ -1,6 +1,6 @@
 # Blog API
 
-API documentation for the Blog API
+API documentation for the Crud API Challenge - Slightly Techie
 
 ## Base URL
 
@@ -8,19 +8,21 @@ API documentation for the Blog API
 
 ## Authentication
 
-To access the protected endpoints, users need to include an authentication token in the request headers.
+An authentication token needs to be added to the request headers to access protected endpoints.
 
-### Register a new user
+### Register New User
 
 - Endpoint: `/auth/register`
 - Method: POST
 - Request body:
   - `username` (string): The username for the new user.
+  - `email` (string): The email for the new user.
   - `password` (string): The password for the new user.
 - Response:
   - Status code 201: User registered successfully.
-  - Status code 400: Username already exists.
+  - Status code 400: Email already exists.
   - Status code 500: Internal Server Error.
+  - Status code 501: Email Required.
 
 ### Login
 
@@ -30,14 +32,14 @@ To access the protected endpoints, users need to include an authentication token
   - `username` (string): The username of the user.
   - `password` (string): The password of the user.
 - Response:
-  - Status code 200: Login successful. Returns the authentication token.
+  - Status code 200: Login successful. Returns the authentication token and username.
   - Status code 401: Invalid credentials.
   - Status code 404: User not found.
   - Status code 500: Internal Server Error.
 
 ## Blog Posts
 
-### Create a new post
+### Create New Post
 
 - Endpoint: `/posts`
 - Method: POST
@@ -50,7 +52,7 @@ To access the protected endpoints, users need to include an authentication token
   - Status code 401: Unauthorized (Invalid or missing authentication token).
   - Status code 500: Internal Server Error.
 
-### Get all posts
+### Get all Posts
 
 - Endpoint: `/posts`
 - Method: GET
@@ -58,7 +60,7 @@ To access the protected endpoints, users need to include an authentication token
   - Status code 200: Returns an array of all blog posts.
   - Status code 500: Internal Server Error.
 
-### Get a specific post
+### Get specific Post
 
 - Endpoint: `/posts/{postId}`
 - Method: GET
@@ -67,7 +69,7 @@ To access the protected endpoints, users need to include an authentication token
   - Status code 404: Post not found.
   - Status code 500: Internal Server Error.
 
-### Update a post
+### Update Post
 
 - Endpoint: `/posts/{postId}`
 - Method: PUT
@@ -81,7 +83,7 @@ To access the protected endpoints, users need to include an authentication token
   - Status code 404: Post not found.
   - Status code 500: Internal Server Error.
 
-### Delete a post
+### Delete Post
 
 - Endpoint: `/posts/{postId}`
 - Method: DELETE
