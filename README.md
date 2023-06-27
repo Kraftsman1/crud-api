@@ -47,7 +47,11 @@ API documentation for the Crud API Challenge - Slightly Techie
 
 ## Base URL
 
-- Base URL: `http://localhost:3000/api`
+### Primary/Main
+- Base URL: `https://crud-api-production-17fc.up.railway.app/api`
+
+### Secondary/Backup
+- Base URL: `https://crud-api-iw39.onrender.com/api`
 
 ## Authentication
 
