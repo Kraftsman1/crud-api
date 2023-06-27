@@ -14,11 +14,15 @@ const model = mongoose.Schema({
         type: String,
         required: true
     },
-    role: {
-        type: String,
-        default: 'admin',
-        enum: ['admin', 'client']
+    createdAt: {
+        type: Date,
+        default: Date.now,
     },
+    // role: {
+    //     type: String,
+    //     default: 'admin',
+    //     enum: ['admin', 'client']
+    // },
     accessToken: {
         type: String
     }
